@@ -1,6 +1,25 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   images: {
-    domains: ["links.papareact.com"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'links.papareact.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn-icons-png.flaticon.com',
+      },
+    ],
   },
 };
+
+module.exports = nextConfig;

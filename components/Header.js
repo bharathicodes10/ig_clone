@@ -7,29 +7,53 @@ import {
   PaperAirplaneIcon,
   MenuIcon,
 } from "@heroicons/react/outline";
+
 import { HomeIcon } from "@heroicons/react/solid";
 import { signIn, useSession } from "next-auth/react";
 import { signOut } from "next-auth/react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/router";
+import { useRecoilState } from "recoil";
+import { modalState} from "../atoms/modalAtom";
 function Header() {
   const { data: session } = useSession();
-  console.log(session);
+  const [open,setOpen]=useRecoilState(modalState);
+
+  const router=useRouter();
+  //console.log(session);
   const [menuOpen, setMenuOpen] = useState(false);
   const [signInOpen, setSignInOpen] = useState(false);
+  const menuRef = useRef(null);
+  useEffect(() => {
+  function handleClickOutside(event) {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setMenuOpen(false);
+      setSignInOpen(false);
+    }
+  }
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
   return (
     <div className="shadow-sm border-b bg-white sticky top-0 z-50">
-      <div className="flex justify-between max-w-6xl mt-5 lg:mx-auto">
+      <div className="flex items-center justify-between max-w-6xl mt-5 lg:mx-auto px-4 h-14">
         {/*Left */}
-        <div className="relative hidden lg:inline-grid  w-24 cursor-pointer">
+        {/* desktop */}
+        <div onClick={()=>router.push('/')} className="relative hidden lg:inline-grid  w-28 h-9 cursor-pointer">
           <Image
-            src="https://links.papareact.com/ocw"
+            src="/Instagram_logo.svg"
             layout="fill"
             objectFit="contain"
           />
         </div>
-        <div className="relative w-10 lg:hidden flex-shrink-0 cursor-pointer">
+         {/* responsive */}
+        <div onClick={()=>router.push('/')} className="relative w-10 h-10 lg:hidden flex items-center cursor-pointer">
           <Image
-            src="https://links.papareact.com/jjm"
+            src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
             layout="fill"
             objectFit="contain"
           />
@@ -49,7 +73,7 @@ function Header() {
         </div>
         {/*Right */}
         <div className="flex items-center justify-end space-x-4">
-          <HomeIcon className="navbtn" />
+          <HomeIcon onClick={()=>router.push('/')}  className="navbtn" />
           <MenuIcon className="h-6 md:hidden cursor-pointer" />
 
           <div className="relative navbtn">
@@ -61,15 +85,16 @@ function Header() {
               3
             </div>
           </div>
-          <PlusCircleIcon className="navbtn" />
+          <PlusCircleIcon onClick={()=>setOpen(true)} className="navbtn" />
           <UserGroupIcon className="navbtn" />
           <HeartIcon className="navbtn" />
           {session ? ( 
-            <div className="relative group">
+            <div ref={menuRef} className="relative group">
               <img
                 onClick={() => setMenuOpen(!menuOpen)}
                 src={session?.user?.image||"https://cdn-icons-png.flaticon.com/512/847/847969.png"}
                 className="h-10 w-10 rounded-full cursor-pointer"
+                referrerPolicy="no-referrer"
               />
               {menuOpen && (
                 <div className="absolute right-0 mt-2 w-32 bg-white border rounded-md shadow-md">
@@ -82,7 +107,7 @@ function Header() {
                 </div>
               )}
             </div>
-           ) : (<div className="signin group">
+           ) : (<div ref={menuRef} className="relative group">
               <img
                 onClick={() => setSignInOpen(!signInOpen)}
                 src={session?.user?.image||"https://cdn-icons-png.flaticon.com/512/847/847969.png"}
