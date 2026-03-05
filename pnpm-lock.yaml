@@ -9,23 +9,26 @@ importers:
   .:
     dependencies:
       '@headlessui/react':
-        specifier: ^2.2.9
-        version: 2.2.9(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
+        specifier: ^1.7.17
+        version: 1.7.19(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@heroicons/react':
         specifier: ^1.0.6
         version: 1.0.6(react@17.0.2)
       '@swc/helpers':
-        specifier: ^0.5.19
+        specifier: ^0.5.2
         version: 0.5.19
       '@tailwindcss/forms':
         specifier: ^0.4.0
         version: 0.4.1(tailwindcss@3.4.19)
+      encoding:
+        specifier: ^0.1.13
+        version: 0.1.13
       faker:
         specifier: ^6.6.6
         version: 6.6.6
       firebase:
         specifier: ^9.6.3
-        version: 9.23.0
+        version: 9.23.0(encoding@0.1.13)
       next:
         specifier: 12.3.4
         version: 12.3.4(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
@@ -262,27 +265,6 @@ packages:
   '@firebase/webchannel-wrapper@0.10.1':
     resolution: {integrity: sha512-Dq5rYfEpdeel0bLVN+nfD1VWmzCkK+pJbSjIawGE+RY4+NIJqhbUDDQjvV0NUK84fMfwxvtFoCtEe70HfZjFcw==}
 
-  '@floating-ui/core@1.7.5':
-    resolution: {integrity: sha512-1Ih4WTWyw0+lKyFMcBHGbb5U5FtuHJuujoyyr5zTaWS5EYMeT6Jb2AuDeftsCsEuchO+mM2ij5+q9crhydzLhQ==}
-
-  '@floating-ui/dom@1.7.6':
-    resolution: {integrity: sha512-9gZSAI5XM36880PPMm//9dfiEngYoC6Am2izES1FF406YFsjvyBMmeJ2g4SAju3xWwtuynNRFL2s9hgxpLI5SQ==}
-
-  '@floating-ui/react-dom@2.1.8':
-    resolution: {integrity: sha512-cC52bHwM/n/CxS87FH0yWdngEZrjdtLW/qVruo68qg+prK7ZQ4YGdut2GyDVpoGeAYe/h899rVeOVm6Oi40k2A==}
-    peerDependencies:
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-
-  '@floating-ui/react@0.26.28':
-    resolution: {integrity: sha512-yORQuuAtVpiRjpMhdc0wJj06b9JFjrYF4qp96j++v2NBpbi6SEGF7donUJ3TMieerQ6qVkAv1tgr7L4r5roTqw==}
-    peerDependencies:
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-
-  '@floating-ui/utils@0.2.11':
-    resolution: {integrity: sha512-RiB/yIh78pcIxl6lLMG0CgBXAZ2Y0eVHqMPYugu+9U0AeT6YBeiJpf7lbdJNIugFP5SIjwNRgo4DhR1Qxi26Gg==}
-
   '@grpc/grpc-js@1.7.3':
     resolution: {integrity: sha512-H9l79u4kJ2PVSxUNA08HMYAnUBLj9v6KjYQ7SQ71hOZcEXhShE/y5iQCesP8+6/Ik/7i2O0a10bPquIcYfufog==}
     engines: {node: ^8.13.0 || >=10.10.0}
@@ -297,12 +279,12 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
-  '@headlessui/react@2.2.9':
-    resolution: {integrity: sha512-Mb+Un58gwBn0/yWZfyrCh0TJyurtT+dETj7YHleylHk5od3dv2XqETPGWMyQ5/7sYN7oWdyM1u9MvC0OC8UmzQ==}
+  '@headlessui/react@1.7.19':
+    resolution: {integrity: sha512-Ll+8q3OlMJfJbAKM/+/Y2q6PPYbryqNTXDbryx7SXLIDamkF6iQFbriYHga0dY44PvDhvvBWCx1Xj4U5+G4hOw==}
     engines: {node: '>=10'}
     peerDependencies:
-      react: ^18 || ^19 || ^19.0.0-rc
-      react-dom: ^18 || ^19 || ^19.0.0-rc
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
 
   '@heroicons/react@1.0.6':
     resolution: {integrity: sha512-JJCXydOFWMDpCP4q13iEplA503MQO3xLoZiKum+955ZCtHINWnx26CUxVxxFQu/uLb4LW3ge15ZpzIkXKkJ8oQ==}
@@ -452,43 +434,6 @@ packages:
   '@protobufjs/utf8@1.1.0':
     resolution: {integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==}
 
-  '@react-aria/focus@3.21.4':
-    resolution: {integrity: sha512-6gz+j9ip0/vFRTKJMl3R30MHopn4i19HqqLfSQfElxJD+r9hBnYG1Q6Wd/kl/WRR1+CALn2F+rn06jUnf5sT8Q==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
-      react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
-
-  '@react-aria/interactions@3.27.0':
-    resolution: {integrity: sha512-D27pOy+0jIfHK60BB26AgqjjRFOYdvVSkwC31b2LicIzRCSPOSP06V4gMHuGmkhNTF4+YWDi1HHYjxIvMeiSlA==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
-      react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
-
-  '@react-aria/ssr@3.9.10':
-    resolution: {integrity: sha512-hvTm77Pf+pMBhuBm760Li0BVIO38jv1IBws1xFm1NoL26PU+fe+FMW5+VZWyANR6nYL65joaJKZqOdTQMkO9IQ==}
-    engines: {node: '>= 12'}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
-
-  '@react-aria/utils@3.33.0':
-    resolution: {integrity: sha512-yvz7CMH8d2VjwbSa5nGXqjU031tYhD8ddax95VzJsHSPyqHDEGfxul8RkhGV6oO7bVqZxVs6xY66NIgae+FHjw==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
-      react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
-
-  '@react-stately/flags@3.1.2':
-    resolution: {integrity: sha512-2HjFcZx1MyQXoPqcBGALwWWmgFVUk2TuKVIQxCbRq7fPyWXIl6VHcakCLurdtYC2Iks7zizvz0Idv48MQ38DWg==}
-
-  '@react-stately/utils@3.11.0':
-    resolution: {integrity: sha512-8LZpYowJ9eZmmYLpudbo/eclIRnbhWIJZ994ncmlKlouNzKohtM8qTC6B1w1pwUbiwGdUoyzLuQbeaIor5Dvcw==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
-
-  '@react-types/shared@3.33.0':
-    resolution: {integrity: sha512-xuUpP6MyuPmJtzNOqF5pzFUIHH2YogyOQfUQHag54PRmWB7AbjuGWBUv0l1UDmz6+AbzAYGmDVAzcRDOu2PFpw==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
-
   '@swc/helpers@0.4.11':
     resolution: {integrity: sha512-rEUrBSGIoSFuYxwBYtlUFMlE2CwGhmW+w9355/5oduSw8e5h2+Tj4UrAGNNgP9915++wj5vkQo0UuOBqOAq4nw==}
 
@@ -578,16 +523,15 @@ packages:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
     engines: {node: '>= 8.10.0'}
 
+  client-only@0.0.1:
+    resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+
   cliui@7.0.4:
     resolution: {integrity: sha512-OcRE68cOsVMXp1Yvonl/fzkQOyjLSu/8bhPDfQt0e0/Eb283TKP20Fs2MqoPsr9SwA595rRCA+QMzYc9nBP+JQ==}
 
   cliui@8.0.1:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
-
-  clsx@2.1.1:
-    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
-    engines: {node: '>=6'}
 
   color-convert@2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
@@ -623,6 +567,9 @@ packages:
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
+
+  encoding@0.1.13:
+    resolution: {integrity: sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==}
 
   escalade@3.2.0:
     resolution: {integrity: sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==}
@@ -690,6 +637,10 @@ packages:
 
   http-parser-js@0.5.10:
     resolution: {integrity: sha512-Pysuw9XpUq5dVc/2SMHpuTY01RFl8fttgcyunjL7eEMhGM3cI4eOmiCycJDVCo/7O7ClfQD3SaI6ftDzqOXYMA==}
+
+  iconv-lite@0.6.3:
+    resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
+    engines: {node: '>=0.10.0'}
 
   idb@7.0.1:
     resolution: {integrity: sha512-UUxlE7vGWK5RfB/fDwEGgRf84DY/ieqNha6msMV99UsEMQhJ1RwbCd8AYBj3QMgnE3VZnfQvm4oKVCJTYlqIgg==}
@@ -987,6 +938,9 @@ packages:
   safe-buffer@5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
 
+  safer-buffer@2.1.2:
+    resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
+
   scheduler@0.20.2:
     resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
 
@@ -1023,9 +977,6 @@ packages:
   supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
-
-  tabbable@6.4.0:
-    resolution: {integrity: sha512-05PUHKSNE8ou2dwIxTngl4EzcnsCDZGJ/iCLtDflR/SHB/ny14rXc+qU5P4mG9JkusiV7EivzY9Mhm55AzAvCg==}
 
   tailwind-scrollbar-hide@1.3.1:
     resolution: {integrity: sha512-eUAvPTltKnAGHbCBRpOk5S7+UZTkFZgDKmZLZ6jZXXs4V7mRXvwshBjeMwrv3vmiWqm3IGEDFVKzUSm1JuoXKw==}
@@ -1079,11 +1030,6 @@ packages:
     resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
-
-  use-sync-external-store@1.6.0:
-    resolution: {integrity: sha512-Pp6GSwGP/NrPIrxVFAIkOQeyw8lFenOHijQWkUTrDvrF4ALqylP2C/KCkeS9dpUM3KvYRQhna5vt7IL95+ZQ9w==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
@@ -1205,14 +1151,14 @@ snapshots:
       idb: 7.1.1
       tslib: 2.8.1
 
-  '@firebase/auth-compat@0.4.2(@firebase/app-compat@0.2.13)(@firebase/app-types@0.9.0)(@firebase/app@0.9.13)':
+  '@firebase/auth-compat@0.4.2(@firebase/app-compat@0.2.13)(@firebase/app-types@0.9.0)(@firebase/app@0.9.13)(encoding@0.1.13)':
     dependencies:
       '@firebase/app-compat': 0.2.13
-      '@firebase/auth': 0.23.2(@firebase/app@0.9.13)
+      '@firebase/auth': 0.23.2(@firebase/app@0.9.13)(encoding@0.1.13)
       '@firebase/auth-types': 0.12.0(@firebase/app-types@0.9.0)(@firebase/util@1.9.3)
       '@firebase/component': 0.6.4
       '@firebase/util': 1.9.3
-      node-fetch: 2.6.7
+      node-fetch: 2.6.7(encoding@0.1.13)
       tslib: 2.8.1
     transitivePeerDependencies:
       - '@firebase/app'
@@ -1226,13 +1172,13 @@ snapshots:
       '@firebase/app-types': 0.9.0
       '@firebase/util': 1.9.3
 
-  '@firebase/auth@0.23.2(@firebase/app@0.9.13)':
+  '@firebase/auth@0.23.2(@firebase/app@0.9.13)(encoding@0.1.13)':
     dependencies:
       '@firebase/app': 0.9.13
       '@firebase/component': 0.6.4
       '@firebase/logger': 0.4.0
       '@firebase/util': 1.9.3
-      node-fetch: 2.6.7
+      node-fetch: 2.6.7(encoding@0.1.13)
       tslib: 2.8.1
     transitivePeerDependencies:
       - encoding
@@ -1265,11 +1211,11 @@ snapshots:
       faye-websocket: 0.11.4
       tslib: 2.8.1
 
-  '@firebase/firestore-compat@0.3.12(@firebase/app-compat@0.2.13)(@firebase/app-types@0.9.0)(@firebase/app@0.9.13)':
+  '@firebase/firestore-compat@0.3.12(@firebase/app-compat@0.2.13)(@firebase/app-types@0.9.0)(@firebase/app@0.9.13)(encoding@0.1.13)':
     dependencies:
       '@firebase/app-compat': 0.2.13
       '@firebase/component': 0.6.4
-      '@firebase/firestore': 3.13.0(@firebase/app@0.9.13)
+      '@firebase/firestore': 3.13.0(@firebase/app@0.9.13)(encoding@0.1.13)
       '@firebase/firestore-types': 2.5.1(@firebase/app-types@0.9.0)(@firebase/util@1.9.3)
       '@firebase/util': 1.9.3
       tslib: 2.8.1
@@ -1283,7 +1229,7 @@ snapshots:
       '@firebase/app-types': 0.9.0
       '@firebase/util': 1.9.3
 
-  '@firebase/firestore@3.13.0(@firebase/app@0.9.13)':
+  '@firebase/firestore@3.13.0(@firebase/app@0.9.13)(encoding@0.1.13)':
     dependencies:
       '@firebase/app': 0.9.13
       '@firebase/component': 0.6.4
@@ -1292,16 +1238,16 @@ snapshots:
       '@firebase/webchannel-wrapper': 0.10.1
       '@grpc/grpc-js': 1.7.3
       '@grpc/proto-loader': 0.6.13
-      node-fetch: 2.6.7
+      node-fetch: 2.6.7(encoding@0.1.13)
       tslib: 2.8.1
     transitivePeerDependencies:
       - encoding
 
-  '@firebase/functions-compat@0.3.5(@firebase/app-compat@0.2.13)(@firebase/app@0.9.13)':
+  '@firebase/functions-compat@0.3.5(@firebase/app-compat@0.2.13)(@firebase/app@0.9.13)(encoding@0.1.13)':
     dependencies:
       '@firebase/app-compat': 0.2.13
       '@firebase/component': 0.6.4
-      '@firebase/functions': 0.10.0(@firebase/app@0.9.13)
+      '@firebase/functions': 0.10.0(@firebase/app@0.9.13)(encoding@0.1.13)
       '@firebase/functions-types': 0.6.0
       '@firebase/util': 1.9.3
       tslib: 2.8.1
@@ -1311,7 +1257,7 @@ snapshots:
 
   '@firebase/functions-types@0.6.0': {}
 
-  '@firebase/functions@0.10.0(@firebase/app@0.9.13)':
+  '@firebase/functions@0.10.0(@firebase/app@0.9.13)(encoding@0.1.13)':
     dependencies:
       '@firebase/app': 0.9.13
       '@firebase/app-check-interop-types': 0.3.0
@@ -1319,7 +1265,7 @@ snapshots:
       '@firebase/component': 0.6.4
       '@firebase/messaging-interop-types': 0.2.0
       '@firebase/util': 1.9.3
-      node-fetch: 2.6.7
+      node-fetch: 2.6.7(encoding@0.1.13)
       tslib: 2.8.1
     transitivePeerDependencies:
       - encoding
@@ -1420,11 +1366,11 @@ snapshots:
       '@firebase/util': 1.9.3
       tslib: 2.8.1
 
-  '@firebase/storage-compat@0.3.2(@firebase/app-compat@0.2.13)(@firebase/app-types@0.9.0)(@firebase/app@0.9.13)':
+  '@firebase/storage-compat@0.3.2(@firebase/app-compat@0.2.13)(@firebase/app-types@0.9.0)(@firebase/app@0.9.13)(encoding@0.1.13)':
     dependencies:
       '@firebase/app-compat': 0.2.13
       '@firebase/component': 0.6.4
-      '@firebase/storage': 0.11.2(@firebase/app@0.9.13)
+      '@firebase/storage': 0.11.2(@firebase/app@0.9.13)(encoding@0.1.13)
       '@firebase/storage-types': 0.8.0(@firebase/app-types@0.9.0)(@firebase/util@1.9.3)
       '@firebase/util': 1.9.3
       tslib: 2.8.1
@@ -1438,12 +1384,12 @@ snapshots:
       '@firebase/app-types': 0.9.0
       '@firebase/util': 1.9.3
 
-  '@firebase/storage@0.11.2(@firebase/app@0.9.13)':
+  '@firebase/storage@0.11.2(@firebase/app@0.9.13)(encoding@0.1.13)':
     dependencies:
       '@firebase/app': 0.9.13
       '@firebase/component': 0.6.4
       '@firebase/util': 1.9.3
-      node-fetch: 2.6.7
+      node-fetch: 2.6.7(encoding@0.1.13)
       tslib: 2.8.1
     transitivePeerDependencies:
       - encoding
@@ -1453,31 +1399,6 @@ snapshots:
       tslib: 2.8.1
 
   '@firebase/webchannel-wrapper@0.10.1': {}
-
-  '@floating-ui/core@1.7.5':
-    dependencies:
-      '@floating-ui/utils': 0.2.11
-
-  '@floating-ui/dom@1.7.6':
-    dependencies:
-      '@floating-ui/core': 1.7.5
-      '@floating-ui/utils': 0.2.11
-
-  '@floating-ui/react-dom@2.1.8(react-dom@17.0.2(react@17.0.2))(react@17.0.2)':
-    dependencies:
-      '@floating-ui/dom': 1.7.6
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
-
-  '@floating-ui/react@0.26.28(react-dom@17.0.2(react@17.0.2))(react@17.0.2)':
-    dependencies:
-      '@floating-ui/react-dom': 2.1.8(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
-      '@floating-ui/utils': 0.2.11
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
-      tabbable: 6.4.0
-
-  '@floating-ui/utils@0.2.11': {}
 
   '@grpc/grpc-js@1.7.3':
     dependencies:
@@ -1499,15 +1420,12 @@ snapshots:
       protobufjs: 7.5.4
       yargs: 17.7.2
 
-  '@headlessui/react@2.2.9(react-dom@17.0.2(react@17.0.2))(react@17.0.2)':
+  '@headlessui/react@1.7.19(react-dom@17.0.2(react@17.0.2))(react@17.0.2)':
     dependencies:
-      '@floating-ui/react': 0.26.28(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
-      '@react-aria/focus': 3.21.4(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
-      '@react-aria/interactions': 3.27.0(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@tanstack/react-virtual': 3.13.19(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
+      client-only: 0.0.1
       react: 17.0.2
       react-dom: 17.0.2(react@17.0.2)
-      use-sync-external-store: 1.6.0(react@17.0.2)
 
   '@heroicons/react@1.0.6(react@17.0.2)':
     dependencies:
@@ -1605,55 +1523,6 @@ snapshots:
 
   '@protobufjs/utf8@1.1.0': {}
 
-  '@react-aria/focus@3.21.4(react-dom@17.0.2(react@17.0.2))(react@17.0.2)':
-    dependencies:
-      '@react-aria/interactions': 3.27.0(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
-      '@react-aria/utils': 3.33.0(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
-      '@react-types/shared': 3.33.0(react@17.0.2)
-      '@swc/helpers': 0.5.19
-      clsx: 2.1.1
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
-
-  '@react-aria/interactions@3.27.0(react-dom@17.0.2(react@17.0.2))(react@17.0.2)':
-    dependencies:
-      '@react-aria/ssr': 3.9.10(react@17.0.2)
-      '@react-aria/utils': 3.33.0(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
-      '@react-stately/flags': 3.1.2
-      '@react-types/shared': 3.33.0(react@17.0.2)
-      '@swc/helpers': 0.5.19
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
-
-  '@react-aria/ssr@3.9.10(react@17.0.2)':
-    dependencies:
-      '@swc/helpers': 0.5.19
-      react: 17.0.2
-
-  '@react-aria/utils@3.33.0(react-dom@17.0.2(react@17.0.2))(react@17.0.2)':
-    dependencies:
-      '@react-aria/ssr': 3.9.10(react@17.0.2)
-      '@react-stately/flags': 3.1.2
-      '@react-stately/utils': 3.11.0(react@17.0.2)
-      '@react-types/shared': 3.33.0(react@17.0.2)
-      '@swc/helpers': 0.5.19
-      clsx: 2.1.1
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
-
-  '@react-stately/flags@3.1.2':
-    dependencies:
-      '@swc/helpers': 0.5.19
-
-  '@react-stately/utils@3.11.0(react@17.0.2)':
-    dependencies:
-      '@swc/helpers': 0.5.19
-      react: 17.0.2
-
-  '@react-types/shared@3.33.0(react@17.0.2)':
-    dependencies:
-      react: 17.0.2
-
   '@swc/helpers@0.4.11':
     dependencies:
       tslib: 2.8.1
@@ -1745,6 +1614,8 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
+  client-only@0.0.1: {}
+
   cliui@7.0.4:
     dependencies:
       string-width: 4.2.3
@@ -1756,8 +1627,6 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
-
-  clsx@2.1.1: {}
 
   color-convert@2.0.1:
     dependencies:
@@ -1780,6 +1649,10 @@ snapshots:
   electron-to-chromium@1.5.307: {}
 
   emoji-regex@8.0.0: {}
+
+  encoding@0.1.13:
+    dependencies:
+      iconv-lite: 0.6.3
 
   escalade@3.2.0: {}
 
@@ -1809,7 +1682,7 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  firebase@9.23.0:
+  firebase@9.23.0(encoding@0.1.13):
     dependencies:
       '@firebase/analytics': 0.10.0(@firebase/app@0.9.13)
       '@firebase/analytics-compat': 0.2.6(@firebase/app-compat@0.2.13)(@firebase/app@0.9.13)
@@ -1818,14 +1691,14 @@ snapshots:
       '@firebase/app-check-compat': 0.3.7(@firebase/app-compat@0.2.13)(@firebase/app@0.9.13)
       '@firebase/app-compat': 0.2.13
       '@firebase/app-types': 0.9.0
-      '@firebase/auth': 0.23.2(@firebase/app@0.9.13)
-      '@firebase/auth-compat': 0.4.2(@firebase/app-compat@0.2.13)(@firebase/app-types@0.9.0)(@firebase/app@0.9.13)
+      '@firebase/auth': 0.23.2(@firebase/app@0.9.13)(encoding@0.1.13)
+      '@firebase/auth-compat': 0.4.2(@firebase/app-compat@0.2.13)(@firebase/app-types@0.9.0)(@firebase/app@0.9.13)(encoding@0.1.13)
       '@firebase/database': 0.14.4
       '@firebase/database-compat': 0.3.4
-      '@firebase/firestore': 3.13.0(@firebase/app@0.9.13)
-      '@firebase/firestore-compat': 0.3.12(@firebase/app-compat@0.2.13)(@firebase/app-types@0.9.0)(@firebase/app@0.9.13)
-      '@firebase/functions': 0.10.0(@firebase/app@0.9.13)
-      '@firebase/functions-compat': 0.3.5(@firebase/app-compat@0.2.13)(@firebase/app@0.9.13)
+      '@firebase/firestore': 3.13.0(@firebase/app@0.9.13)(encoding@0.1.13)
+      '@firebase/firestore-compat': 0.3.12(@firebase/app-compat@0.2.13)(@firebase/app-types@0.9.0)(@firebase/app@0.9.13)(encoding@0.1.13)
+      '@firebase/functions': 0.10.0(@firebase/app@0.9.13)(encoding@0.1.13)
+      '@firebase/functions-compat': 0.3.5(@firebase/app-compat@0.2.13)(@firebase/app@0.9.13)(encoding@0.1.13)
       '@firebase/installations': 0.6.4(@firebase/app@0.9.13)
       '@firebase/installations-compat': 0.2.4(@firebase/app-compat@0.2.13)(@firebase/app-types@0.9.0)(@firebase/app@0.9.13)
       '@firebase/messaging': 0.12.4(@firebase/app@0.9.13)
@@ -1834,8 +1707,8 @@ snapshots:
       '@firebase/performance-compat': 0.2.4(@firebase/app-compat@0.2.13)(@firebase/app@0.9.13)
       '@firebase/remote-config': 0.4.4(@firebase/app@0.9.13)
       '@firebase/remote-config-compat': 0.2.4(@firebase/app-compat@0.2.13)(@firebase/app@0.9.13)
-      '@firebase/storage': 0.11.2(@firebase/app@0.9.13)
-      '@firebase/storage-compat': 0.3.2(@firebase/app-compat@0.2.13)(@firebase/app-types@0.9.0)(@firebase/app@0.9.13)
+      '@firebase/storage': 0.11.2(@firebase/app@0.9.13)(encoding@0.1.13)
+      '@firebase/storage-compat': 0.3.2(@firebase/app-compat@0.2.13)(@firebase/app-types@0.9.0)(@firebase/app@0.9.13)(encoding@0.1.13)
       '@firebase/util': 1.9.3
     transitivePeerDependencies:
       - encoding
@@ -1864,6 +1737,10 @@ snapshots:
       function-bind: 1.1.2
 
   http-parser-js@0.5.10: {}
+
+  iconv-lite@0.6.3:
+    dependencies:
+      safer-buffer: 2.1.2
 
   idb@7.0.1: {}
 
@@ -1971,9 +1848,11 @@ snapshots:
       - '@babel/core'
       - babel-plugin-macros
 
-  node-fetch@2.6.7:
+  node-fetch@2.6.7(encoding@0.1.13):
     dependencies:
       whatwg-url: 5.0.0
+    optionalDependencies:
+      encoding: 0.1.13
 
   node-releases@2.0.36: {}
 
@@ -2136,6 +2015,8 @@ snapshots:
 
   safe-buffer@5.2.1: {}
 
+  safer-buffer@2.1.2: {}
+
   scheduler@0.20.2:
     dependencies:
       loose-envify: 1.4.0
@@ -2168,8 +2049,6 @@ snapshots:
       ts-interface-checker: 0.1.13
 
   supports-preserve-symlinks-flag@1.0.0: {}
-
-  tabbable@6.4.0: {}
 
   tailwind-scrollbar-hide@1.3.1(tailwindcss@3.4.19):
     dependencies:
@@ -2242,10 +2121,6 @@ snapshots:
       picocolors: 1.1.1
 
   use-sync-external-store@1.2.0(react@17.0.2):
-    dependencies:
-      react: 17.0.2
-
-  use-sync-external-store@1.6.0(react@17.0.2):
     dependencies:
       react: 17.0.2
 

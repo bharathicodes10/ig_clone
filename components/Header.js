@@ -14,44 +14,46 @@ import { signOut } from "next-auth/react";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { useRecoilState } from "recoil";
-import { modalState} from "../atoms/modalAtom";
+import { modalState } from "../atoms/modalAtom";
 function Header() {
   const { data: session } = useSession();
-  const [open,setOpen]=useRecoilState(modalState);
-
-  const router=useRouter();
+  const [open, setOpen] = useRecoilState(modalState);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const router = useRouter();
   //console.log(session);
   const [menuOpen, setMenuOpen] = useState(false);
   const [signInOpen, setSignInOpen] = useState(false);
   const menuRef = useRef(null);
   useEffect(() => {
-  function handleClickOutside(event) {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
-      setMenuOpen(false);
-      setSignInOpen(false);
+    function handleClickOutside(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+        setSignInOpen(false);
+      }
     }
-  }
 
-  document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
-  return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
-  };
-}, []);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <div className="shadow-sm border-b bg-white sticky top-0 z-50">
       <div className="flex items-center justify-between max-w-6xl mt-5 lg:mx-auto px-4 h-14">
         {/*Left */}
         {/* desktop */}
-        <div onClick={()=>router.push('/')} className="relative hidden lg:inline-grid  w-28 h-9 cursor-pointer">
-          <Image
-            src="/Instagram_logo.svg"
-            layout="fill"
-            objectFit="contain"
-          />
+        <div
+          onClick={() => router.push("/")}
+          className="relative hidden lg:inline-grid  w-28 h-9 cursor-pointer"
+        >
+          <Image src="/Instagram_logo.svg" layout="fill" objectFit="contain" />
         </div>
-         {/* responsive */}
-        <div onClick={()=>router.push('/')} className="relative w-10 h-10 lg:hidden flex items-center cursor-pointer">
+        {/* responsive */}
+        <div
+          onClick={() => router.push("/")}
+          className="relative w-10 h-10 lg:hidden flex items-center cursor-pointer"
+        >
           <Image
             src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
             layout="fill"
@@ -73,9 +75,29 @@ function Header() {
         </div>
         {/*Right */}
         <div className="flex items-center justify-end space-x-4">
-          <HomeIcon onClick={()=>router.push('/')}  className="navbtn" />
-          <MenuIcon className="h-6 md:hidden cursor-pointer" />
+          <HomeIcon onClick={() => router.push("/")} className="navbtn" />
+          <MenuIcon
+            className="h-6 md:hidden cursor-pointer"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          />
+          {mobileOpen && (
+            <div className="absolute top-14 right-4 bg-white shadow-lg rounded-lg md:hidden w-40">
+              <button
+                className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                onClick={() => setOpen(true)}
+              >
+                Upload Post
+              </button>
 
+              <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                Messages
+              </button>
+
+              <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                Profile
+              </button>
+            </div>
+          )}
           <div className="relative navbtn">
             <PaperAirplaneIcon className="navbtn rotate-45" />
             <div
@@ -85,14 +107,17 @@ function Header() {
               3
             </div>
           </div>
-          <PlusCircleIcon onClick={()=>setOpen(true)} className="navbtn" />
+          <PlusCircleIcon onClick={() => setOpen(true)} className="navbtn" />
           <UserGroupIcon className="navbtn" />
           <HeartIcon className="navbtn" />
-          {session ? ( 
+          {session ? (
             <div ref={menuRef} className="relative group">
               <img
                 onClick={() => setMenuOpen(!menuOpen)}
-                src={session?.user?.image||"https://cdn-icons-png.flaticon.com/512/847/847969.png"}
+                src={
+                  session?.user?.image ||
+                  "https://cdn-icons-png.flaticon.com/512/847/847969.png"
+                }
                 className="h-10 w-10 rounded-full cursor-pointer"
                 referrerPolicy="no-referrer"
               />
@@ -107,10 +132,14 @@ function Header() {
                 </div>
               )}
             </div>
-           ) : (<div ref={menuRef} className="relative group">
+          ) : (
+            <div ref={menuRef} className="relative group">
               <img
                 onClick={() => setSignInOpen(!signInOpen)}
-                src={session?.user?.image||"https://cdn-icons-png.flaticon.com/512/847/847969.png"}
+                src={
+                  session?.user?.image ||
+                  "https://cdn-icons-png.flaticon.com/512/847/847969.png"
+                }
                 className="h-10 w-10 rounded-full cursor-pointer"
               />
               {signInOpen && (
@@ -123,7 +152,8 @@ function Header() {
                   </button>
                 </div>
               )}
-            </div>)} 
+            </div>
+          )}
         </div>
       </div>
     </div>
