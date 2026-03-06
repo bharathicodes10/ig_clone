@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <div className="">
       <Head>
-        <title>Instagram 2.0</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Devgram 1.0</title>
+        <link rel="icon" href="/devgram.jpeg" />
       </Head>
       <Modal/>
       {/*header hello world!*/}

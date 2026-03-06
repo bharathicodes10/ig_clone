@@ -5,8 +5,9 @@ function signIn({ providers }) {
         <div>
           <Header/>
           <div className="flex flex-col items-center justify-center min-h-screen py-2 -mt-66 px-14 text-center">
-            <img className="w-80" src="/Instagram_logo.svg" alt="Instagram Logo"/>
-            <p className="font-xs italic">Welcome to my instagram clone!</p>
+            <img className="w-80" src="/devgramwhite.jpeg" alt="Instagram Logo"/>
+            <p className="font-xs italic">Welcome to Devgram</p>
+            <p className="font-xs italic">A developer - built instagram clone.</p>
             <div className="mt-40">
 
             {providers && Object.values(providers).map((provider) => (

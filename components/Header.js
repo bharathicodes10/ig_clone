@@ -44,22 +44,25 @@ function Header() {
         {/*Left */}
         {/* desktop */}
         <div
+  className="flex items-center gap-2 cursor-pointer"
+  onClick={() => router.push("/")}
+>
+  <img src="/devgram.jpeg" className="w-8 h-8 rounded-lg" />
+  <span className="font-semibold font-serif italic text-lg hidden sm:block">Devgram</span>
+</div>
+        {/* <div
           onClick={() => router.push("/")}
           className="relative hidden lg:inline-grid  w-28 h-9 cursor-pointer"
         >
-          <Image src="/Instagram_logo.svg" layout="fill" objectFit="contain" />
-        </div>
+          <Image src="/devgram.jpeg" layout="fill" objectFit="contain" />
+        </div> */}
         {/* responsive */}
-        <div
+        {/* <div
           onClick={() => router.push("/")}
           className="relative w-10 h-10 lg:hidden flex items-center cursor-pointer"
         >
-          <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
-            layout="fill"
-            objectFit="contain"
-          />
-        </div>
+          <Image src="/devgram_word.jpeg" layout="fill" objectFit="contain" />
+        </div> */}
         {/*middle search input*/}
         <div className="max-w-xs">
           <div className="relative mt-1 p-3 rounded-md">
@@ -67,7 +70,7 @@ function Header() {
               <SearchIcon className="w-5 text-gray-500" />
             </div>
             <input
-              className="bg-gray-50 block w-full pl-10 sm:text-sm border-gray-300 focus:ring-black focus:border-black rounded-md"
+              className="bg-gray-50 block w-full sm:w-48 md:w-64 pl-10 sm:text-sm border-gray-300 focus:ring-black focus:border-black rounded-md"
               type="text"
               placeholder="search"
             />
