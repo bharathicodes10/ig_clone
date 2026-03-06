@@ -35,7 +35,7 @@ function Posts() {
 }, [db]);
 
     return (
-        <div>
+        <div referrerPolicy="no-referrer">
             {posts.map((post) =>(
                 <Post key={post.id} id={post.id}
                 username={post.data()?.username}
