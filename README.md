@@ -2,7 +2,7 @@
 
 > A modern, responsive developer photo-sharing platform inspired by Instagram, engineered with Next.js, Firebase Firestore, and Cloudinary.
 
-🔗 **Live Application:** [devgram-demo.vercel.app](https://your-devgram-link.vercel.app)
+🔗 **Live Application:** [devgram-mu.vercel.app](https://devgram-mu.vercel.app)
 
 🌟 Overview
 Devgram is a full-stack social media web application designed for sharing content and community engagement. Built with performance and reactive UI in mind, it provides seamless authentication, rapid media delivery, and real-time community interaction through likes and nested comments.
@@ -49,20 +49,29 @@ Set up environment variables in a .env.local file:
 Code snippet
 # NextAuth
 NEXTAUTH_URL=http://localhost:3000
+
 NEXTAUTH_SECRET=your_nextauth_secret
+
 GOOGLE_CLIENT_ID=your_google_client_id
+
 GOOGLE_CLIENT_SECRET=your_google_client_secret
 
 # Firebase
 NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+
 NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+
 NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
 
 # Cloudinary
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloud_name
+
 CLOUDINARY_API_KEY=your_cloudinary_key
+
 CLOUDINARY_API_SECRET=your_cloudinary_secret
+
 Run the development server:
 
 ```bash
