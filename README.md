@@ -5,9 +5,11 @@
 🔗 **Live Application:** [devgram-mu.vercel.app](https://devgram-mu.vercel.app)
 
 🌟 Overview
+
 Devgram is a full-stack social media web application designed for sharing content and community engagement. Built with performance and reactive UI in mind, it provides seamless authentication, rapid media delivery, and real-time community interaction through likes and nested comments.
 
 🛠️ Tech Stack & Architecture
+
 Frontend & Framework: Next.js (App Router), React, TypeScript
 
 Styling: Tailwind CSS, Lucide Icons
@@ -20,7 +22,8 @@ Asset Storage & CDN: Cloudinary (optimized cloud media uploads and responsive im
 
 Deployment: Vercel
 
-✨ Key Features
+✨ Key Features:
+
 🔐 Secure Authentication: Frictionless Google sign-in and session management powered by NextAuth.js.
 
 🖼️ Media Publishing: Direct image upload workflow integrated with Cloudinary for fast processing, optimization, and CDN delivery.
