@@ -1,31 +1,67 @@
-<<<<<<< HEAD
-# Next.js + Tailwind CSS Example
+# 📸 Devgram
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+> A modern, responsive developer photo-sharing platform inspired by Instagram, engineered with Next.js, Firebase Firestore, and Cloudinary.
 
-## Preview
+🔗 **Live Application:** [devgram-demo.vercel.app](https://your-devgram-link.vercel.app)
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+🌟 Overview
+Devgram is a full-stack social media web application designed for sharing content and community engagement. Built with performance and reactive UI in mind, it provides seamless authentication, rapid media delivery, and real-time community interaction through likes and nested comments.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+🛠️ Tech Stack & Architecture
+Frontend & Framework: Next.js (App Router), React, TypeScript
 
-## Deploy your own
+Styling: Tailwind CSS, Lucide Icons
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+Authentication: NextAuth.js (Google OAuth 2.0 provider integration)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+Database & Realtime Store: Firebase Firestore (NoSQL document store for posts, likes, and comment threads)
 
-## How to use
+Asset Storage & CDN: Cloudinary (optimized cloud media uploads and responsive image delivery)
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+Deployment: Vercel
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+✨ Key Features
+🔐 Secure Authentication: Frictionless Google sign-in and session management powered by NextAuth.js.
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-=======
-# ig_clone
->>>>>>> 7b0e603030d5390baaa23a9cdd8d03a685a2b0fb
+🖼️ Media Publishing: Direct image upload workflow integrated with Cloudinary for fast processing, optimization, and CDN delivery.
+
+❤️ Interactive Social Feed: Real-time like counts, instant state toggling, and interactive post cards.
+
+💬 Community Discussion: Structured comment threads beneath posts allowing instant discussions.
+
+📱 Fully Responsive Layout: Clean, mobile-first UI with modern navigation patterns mirroring native mobile social apps.
+
+🚀 Getting Started
+Clone the repository:
+
+Bash
+git clone [https://github.com/bharathicodes10/Devgram.git](https://github.com/bharathicodes10/Devgram.git)
+cd Devgram
+Install dependencies:
+
+Bash
+npm install
+Set up environment variables in a .env.local file:
+
+Code snippet
+# NextAuth
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your_nextauth_secret
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+
+# Firebase
+NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+
+# Cloudinary
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_cloudinary_key
+CLOUDINARY_API_SECRET=your_cloudinary_secret
+Run the development server:
+
+Bash
+npm run dev
+Open http://localhost:3000 to view the application.
