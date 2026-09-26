@@ -34,14 +34,17 @@ Deployment: Vercel
 🚀 Getting Started
 Clone the repository:
 
-Bash
+```bash
 git clone [https://github.com/bharathicodes10/Devgram.git](https://github.com/bharathicodes10/Devgram.git)
 cd Devgram
+```
+
 Install dependencies:
 
-Bash
+```bash
 npm install
 Set up environment variables in a .env.local file:
+```
 
 Code snippet
 # NextAuth
@@ -62,6 +65,7 @@ CLOUDINARY_API_KEY=your_cloudinary_key
 CLOUDINARY_API_SECRET=your_cloudinary_secret
 Run the development server:
 
-Bash
+```bash
 npm run dev
+```
 Open http://localhost:3000 to view the application.
